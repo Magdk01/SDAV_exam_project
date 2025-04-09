@@ -1,0 +1,40 @@
+title: SDAV Exam Project
+email: s214588@student.dtu.dk
+description: >- # this means to ignore newlines until "baseurl:"
+  Data Visualization Exam Project for the DTU course SDAV.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: Magdk01
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-include-cache
+  - jemoji
+
+# Additional settings for data visualization
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Collections
+collections:
+  visualizations:
+    output: true
+    permalink: /visualizations/:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: visualizations
+    values:
+      layout: visualization
+      comments: true 
