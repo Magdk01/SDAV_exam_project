@@ -2,8 +2,8 @@ title: SDAV Exam Project
 email: s214588@student.dtu.dk
 description: >- # this means to ignore newlines until "baseurl:"
   Data Visualization Exam Project for the DTU course SDAV.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/SDAV_exam_project" # the subpath of your site
+url: "https://magdk01.github.io" # the base hostname & protocol for your site
 github_username: Magdk01
 
 # Build settings
@@ -37,4 +37,13 @@ defaults:
       type: visualizations
     values:
       layout: visualization
-      comments: true 
+      comments: true
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+  - title: GitHub
+    url: https://github.com/Magdk01/SDAV_exam_project 

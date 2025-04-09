@@ -24,4 +24,6 @@ This project focuses on [brief description of your project's focus].
 
 ## About
 
-This project is part of the SDAV course at DTU. For more information about the course, visit the [course website](https://kurser.dtu.dk/course/02805). 
+## Repository
+
+The source code for this project is available on [GitHub](https://github.com/Magdk01/SDAV_exam_project). 
