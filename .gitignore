@@ -7,3 +7,5 @@ vendor/
 *.gem
 *.gemfile.lock
 .DS_Store 
+
+datasets/
