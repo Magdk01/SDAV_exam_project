@@ -1,170 +1,166 @@
 ---
 layout: default
 ---
-<div class="story-container">
-    <article class="story">
-        <header class="story-header">
-            <h1>{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h2 class="subtitle">{{ page.subtitle }}</h2>
-            {% endif %}
-        </header>
-
-        <div class="story-nav-arrows">
-            {% if page.previous_story %}
-            <a href="{{ page.previous_story }}" class="arrow arrow-left"
-                title="Previous: {{ page.previous_story_title | default: 'Previous Story' }}">&#8592; <span
-                    class="arrow-label">{{ page.previous_story_title }}</span></a>
-            {% endif %}
-            <div class="arrow-group">
-                {% if page.next_story %}
-                <a href="{{ page.next_story }}" class="arrow arrow-right"
-                    title="Next: {{ page.next_story_title | default: 'Next Story' }}"><span class="arrow-label">{{
-                        page.next_story_title }}</span> &#8594;</a>
-                {% endif %}
-            </div>
-        </div>
-
-        <div class="story-content">
-            {{ content }}
-        </div>
-
-        <nav class="story-navigation">
-            <a href="{{ site.baseurl }}/" class="home">
-                Overview
-            </a>
+<div class="wrapper">
+    <div class="story-layout">
+        <nav class="story-sidebar">
+            <h2 class="sidebar-title">Stories</h2>
+            <ul class="sidebar-list">
+                <li class="sidebar-item{% if page.url contains 'data-quality' %} active{% endif %}"><a
+                        href="{{ site.baseurl }}/stories/data-quality">Understanding the Data</a></li>
+                <li class="sidebar-item{% if page.url contains 'trade-volumes' %} active{% endif %}"><a
+                        href="{{ site.baseurl }}/stories/trade-volumes">Global Trade Volumes</a></li>
+                <li class="sidebar-item{% if page.url contains 'network-analysis' %} active{% endif %}"><a
+                        href="{{ site.baseurl }}/stories/network-analysis">Trade Networks</a></li>
+            </ul>
         </nav>
-    </article>
+        <main class="story-main">
+            <article class="story">
+                <header class="story-header">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                    <h2 class="subtitle">{{ page.subtitle }}</h2>
+                    {% endif %}
+                    <div class="story-nav-arrows">
+                        <div style="flex:1;display:flex;">
+                            {% if page.previous_story %}
+                            <a href="{{ page.previous_story }}" class="arrow arrow-left"
+                                title="Previous: {{ page.previous_story_title | default: 'Previous Story' }}">&#8592;
+                                <span class="arrow-label">{{ page.previous_story_title }}</span></a>
+                            {% endif %}
+                        </div>
+                        <div class="arrow-group">
+                            {% if page.next_story %}
+                            <a href="{{ page.next_story }}" class="arrow arrow-right"
+                                title="Next: {{ page.next_story_title | default: 'Next Story' }}"><span
+                                    class="arrow-label">{{
+                                    page.next_story_title }}</span> &#8594;</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </header>
+
+                <div class="story-content">
+                    {{ content }}
+                </div>
+
+                <nav class="story-navigation">
+                    <a href="{{ site.baseurl }}/" class="home">
+                        Overview
+                    </a>
+                </nav>
+            </article>
+        </main>
+    </div>
 </div>
 
-
 <style>
-    /* Force wrapper to be narrower */
     .wrapper {
-        max-width: 1200px !important;
+        max-width: 100vw !important;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-    .visualization {
-        width: 70%;
+    .story-layout {
+        display: flex;
+        width: 100vw;
+        min-height: 100vh;
+    }
+
+    .story-sidebar {
+        background: #f4f7fa;
+        border-right: 2px solid #e0e6ed;
+        padding: 2rem 1.2rem 2rem 1.2rem;
+        min-width: 210px;
+        max-width: 240px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        left: 0;
+    }
+
+    .sidebar-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1.2rem;
+        color: #2c3e50;
+    }
+
+    .sidebar-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .sidebar-item {
+        margin-bottom: 0.7rem;
+    }
+
+    .sidebar-item a {
+        color: #2c3e50;
+        text-decoration: none;
+        font-size: 1.05rem;
+        padding: 0.4em 0.8em;
+        border-radius: 6px;
+        display: block;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .sidebar-item.active a,
+    .sidebar-item a:hover {
+        background: #2c3e50;
+        color: #fff;
+    }
+
+    .story-main {
+        flex: 1;
+        padding: 2.5rem 2.5rem 2.5rem 2rem;
+        min-width: 50vw;
+        max-width: 70vw;
         margin: 0 auto;
-        text-align: left;
     }
 
-    .visualization-header {
+    @media (max-width: 900px) {
+        .story-layout {
+            flex-direction: column;
+            width: 100vw;
+        }
+
+        .story-main {
+            padding: 1rem;
+            max-width: 100vw;
+            margin: 0;
+        }
+    }
+
+    .story-header {
         text-align: center;
         margin-bottom: 2rem;
     }
 
-    /* Make iframes fill their width but respect custom heights */
-    iframe {
-        display: block;
-        margin: 2rem auto;
-        border: none;
-        width: 100%;
+    .story-header h1 {
+        margin-bottom: 0.5rem;
     }
 
-    /* Default height if none specified */
-    iframe:not([height]) {
-        height: 500px;
-    }
-
-    @media screen and (max-width: 768px) {
-        .visualization {
-            width: 90%;
-        }
-    }
-
-    .story-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.2rem;
-        margin: 2rem auto;
-        padding: 0.5rem;
-        width: 100%;
-    }
-
-    .story-card {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-        overflow: hidden;
-        text-decoration: none;
-        color: inherit;
-        display: flex;
-        flex-direction: column;
-        aspect-ratio: 4/3;
-        padding: 0.5rem;
-    }
-
-    .story-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-        text-decoration: none;
-    }
-
-    .story-thumbnail {
-        width: 100%;
-        height: 52%;
-        object-fit: cover;
-    }
-
-    .story-content {
-        padding: 1.25rem;
-        background: white;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .story-content h3 {
-        margin: 0 0 0.5rem;
-        font-size: 1.25rem;
-        color: #2c3e50;
-    }
-
-    .story-content p {
-        margin: 0;
+    .story-header .subtitle {
+        margin-top: 0;
         color: #666;
-        font-size: 0.9rem;
-        line-height: 1.4;
-    }
-
-    @media (max-width: 1024px) {
-        .story-grid {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .story-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            padding: 1rem;
-        }
-
-        .story-card {
-            aspect-ratio: auto;
-        }
-
-        .story-card .story-thumbnail {
-            height: 200px;
-        }
+        font-weight: normal;
     }
 
     .story-nav-arrows {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
-        position: relative;
-        margin-bottom: 1.5rem;
+        align-items: center;
+        margin: 1.5rem 0 2rem 0;
     }
 
     .arrow-group {
         display: flex;
-        flex: 1;
-        justify-content: flex-end;
         gap: 0.5rem;
     }
 
