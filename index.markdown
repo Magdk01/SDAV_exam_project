@@ -6,7 +6,6 @@ author: s214588
 
 ---
 
-# Global Trade Networks: A Historical Journey
 
 
 An interactive exploration of international trade relationships from 1870 to 2014, revealing patterns, power shifts, and the impact of historical events on global commerce.
