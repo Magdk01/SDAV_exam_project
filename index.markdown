@@ -1,9 +1,10 @@
 ---
-layout: story
+layout: home
 title: "Global Trade Networks: A Historical Journey"
 
 date: 2024-03-26
 author: s214588
+
 ---
 
 

@@ -2,7 +2,8 @@
 layout: story
 title: "Trade Networks"
 subtitle: "Network Analysis of Global Trade Relationships"
-previous_story: /stories/trade-volumes
+previous_story: trade-volumes
+previous_story_title: "Trade Volumes"
 next_story: 
 ---
 

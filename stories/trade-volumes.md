@@ -2,8 +2,10 @@
 layout: story
 title: "Global Trade Volumes"
 subtitle: "The Evolution of International Trade (1870-2014)"
-previous_story: /stories/data-quality
-next_story: /stories/network-analysis
+previous_story: data-quality
+previous_story_title: "Data Quality"
+next_story: network-analysis
+next_story_title: "Network Analysis"
 ---
 
 <div class="visualization-container">

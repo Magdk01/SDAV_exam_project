@@ -3,7 +3,8 @@ layout: story
 title: "Understanding the Data"
 subtitle: "A Deep Dive into Historical Trade Data Quality"
 previous_story: 
-next_story: /stories/trade-volumes
+next_story: trade-volumes
+next_story_title: "Trade Volumes"
 ---
 
 <div class="visualization-container">

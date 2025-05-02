@@ -1,0 +1,125 @@
+---
+layout: default
+---
+<div class="home-container">
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            {{ content }}
+        </div>
+    </main>
+</div>
+
+<style>
+    .wrapper {
+        max-width: 1200px !important;
+    }
+
+    .visualization {
+        width: 70%;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .visualization-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    /* Make iframes fill their width but respect custom heights */
+    iframe {
+        display: block;
+        margin: 2rem auto;
+        border: none;
+        width: 100%;
+    }
+
+    /* Default height if none specified */
+    iframe:not([height]) {
+        height: 500px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .visualization {
+            width: 90%;
+        }
+    }
+
+    .home-container .story-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+        margin: 2rem auto;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    .home-container .story-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        aspect-ratio: 4/3;
+        padding: 0.5rem;
+    }
+
+    .home-container .story-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+        text-decoration: none;
+    }
+
+    .home-container .story-thumbnail {
+        width: 100%;
+        height: 52%;
+        object-fit: cover;
+    }
+
+    .home-container .story-content {
+        padding: 1.25rem;
+        background: white;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .home-container .story-content h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.25rem;
+        color: #2c3e50;
+    }
+
+    .home-container .story-content p {
+        margin: 0;
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 1024px) {
+        .home-container .story-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .home-container .story-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
+        .home-container .story-card {
+            aspect-ratio: auto;
+        }
+
+        .home-container .story-card .story-thumbnail {
+            height: 200px;
+        }
+    }
+</style>

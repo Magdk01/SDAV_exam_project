@@ -10,26 +10,29 @@ layout: default
             {% endif %}
         </header>
 
+        <div class="story-nav-arrows">
+            {% if page.previous_story %}
+            <a href="{{ page.previous_story }}" class="arrow arrow-left"
+                title="Previous: {{ page.previous_story_title | default: 'Previous Story' }}">&#8592; <span
+                    class="arrow-label">{{ page.previous_story_title }}</span></a>
+            {% endif %}
+            <div class="arrow-group">
+                {% if page.next_story %}
+                <a href="{{ page.next_story }}" class="arrow arrow-right"
+                    title="Next: {{ page.next_story_title | default: 'Next Story' }}"><span class="arrow-label">{{
+                        page.next_story_title }}</span> &#8594;</a>
+                {% endif %}
+            </div>
+        </div>
+
         <div class="story-content">
             {{ content }}
         </div>
 
         <nav class="story-navigation">
-            {% if page.previous_story %}
-            <a href="{{ page.previous_story }}" class="prev-story">
-                <span>←</span> Previous Story
-            </a>
-            {% endif %}
-
             <a href="{{ site.baseurl }}/" class="home">
                 Overview
             </a>
-
-            {% if page.next_story %}
-            <a href="{{ page.next_story }}" class="next-story">
-                Next Story <span>→</span>
-            </a>
-            {% endif %}
         </nav>
     </article>
 </div>
@@ -148,5 +151,64 @@ layout: default
         .story-card .story-thumbnail {
             height: 200px;
         }
+    }
+
+    .story-nav-arrows {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
+    .arrow-group {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
+
+    .arrow {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        text-decoration: none;
+        background: #fff;
+        border-radius: 50px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        padding: 0.3em 0.6em;
+        display: flex;
+        align-items: center;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        border: 2px solid transparent;
+    }
+
+    .arrow-label {
+        font-size: 1rem;
+        margin: 0 0.5em;
+        color: #2c3e50;
+        font-weight: 500;
+        white-space: nowrap;
+        transition: color 0.2s;
+    }
+
+    .arrow:hover,
+    .arrow:focus {
+        background: #2c3e50;
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(44, 62, 80, 0.15);
+        border: 2px solid #2c3e50;
+    }
+
+    .arrow:hover .arrow-label,
+    .arrow:focus .arrow-label {
+        color: #fff;
+    }
+
+    .arrow-left {
+        margin-right: auto;
+    }
+
+    .arrow-right {
+        margin-left: 0.5rem;
     }
 </style>
