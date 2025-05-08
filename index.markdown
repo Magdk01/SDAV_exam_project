@@ -29,6 +29,14 @@ Choose any story card below to begin your exploration, or follow them in sequenc
         </div>
     </a>
 
+    <a href="{{ site.baseurl }}/stories/gdp-development" class="story-card">
+        <img src="{{ site.baseurl }}/assets/images/gdp-development-thumb.png" alt="GDP Development" class="story-thumbnail">
+        <div class="story-content">
+            <h3>GDP Development</h3>
+            <p>The economic rise of the world's major powers, with a focus on the US and China.</p>
+        </div>
+    </a>
+
     <a href="{{ site.baseurl }}/stories/network-analysis" class="story-card">
         <img src="{{ site.baseurl }}/assets/images/network-thumb.png" alt="Network Analysis" class="story-thumbnail">
         <div class="story-content">

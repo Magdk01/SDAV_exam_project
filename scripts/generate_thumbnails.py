@@ -3,7 +3,12 @@ import os
 
 
 def create_placeholder_image(
-    title, filename, size=(600, 400), bg_color="#f0f0f0", text_color="#333333"
+    title,
+    filename,
+    size=(600, 400),
+    bg_color="#f0f0f0",
+    text_color="#333333",
+    accent_color="#007bff",
 ):
     """Create a placeholder image with a title and some visual elements"""
     # Create new image with background
@@ -14,14 +19,13 @@ def create_placeholder_image(
     # Draw a border
     border_width = 10
     draw.rectangle(
-        [0, 0, size[0] - 1, size[1] - 1], outline="#007bff", width=border_width
+        [0, 0, size[0] - 1, size[1] - 1], outline=accent_color, width=border_width
     )
 
     # Draw some decorative lines
-    line_color = "#007bff"
     line_spacing = 40
     for y in range(line_spacing, size[1], line_spacing):
-        draw.line([(0, y), (size[0], y)], fill=line_color, width=1)
+        draw.line([(0, y), (size[0], y)], fill=accent_color, width=1)
 
     # Add title text
     try:
@@ -47,23 +51,36 @@ def create_placeholder_image(
 
 
 def main():
-    # Define the thumbnails to create
+    # Define the thumbnails to create with their colors
     thumbnails = [
         {
             "title": "Data Quality\nAnalysis",
             "filename": "assets/images/data-quality-thumb.png",
+            "color": "#3498db",  # Blue
         },
         {
             "title": "Trade Volumes\nAnalysis",
             "filename": "assets/images/trade-volumes-thumb.png",
+            "color": "#2ecc71",  # Green
         },
-        {"title": "Network\nAnalysis", "filename": "assets/images/network-thumb.png"},
+        {
+            "title": "GDP\nDevelopment",
+            "filename": "assets/images/gdp-development-thumb.png",
+            "color": "#f39c12",  # Orange/Gold
+        },
+        {
+            "title": "Network\nAnalysis",
+            "filename": "assets/images/network-thumb.png",
+            "color": "#e74c3c",  # Red
+        },
     ]
 
     # Create each thumbnail
     for thumb in thumbnails:
         create_placeholder_image(
-            thumb["title"], os.path.join("SDAV_exam_project", thumb["filename"])
+            thumb["title"],
+            os.path.join("SDAV_exam_project", thumb["filename"]),
+            accent_color=thumb["color"],
         )
 
 
