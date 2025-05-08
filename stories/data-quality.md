@@ -7,9 +7,9 @@ next_story: trade-volumes
 next_story_title: "Trade Volumes"
 ---
 
-<div class="visualization-container">
-    <div id="quality-viz"></div>
-</div>
+
+   <iframe src="../visualizations/data_quality_analysis.html" width="100%" height="1100px" frameborder="0"></iframe>
+
 
 ## Data Coverage and Quality
 
@@ -31,13 +31,8 @@ Our analysis begins with understanding the quality and coverage of the historica
    - Some sources provide more comprehensive coverage than others
    - Modern data (post-1950) tends to be more reliable
 
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // We'll add the visualization code here
-    // This will be populated with the actual data quality visualization
-    Plotly.newPlot('quality-viz', {
-        // Visualization data will go here
-    });
-});
-</script> 
+3. **Data Quality Metrics**
+   - The visualization shows the distribution of complete vs. missing data
+   - Number of trading countries over time
+   - Source code distribution and their reliability
+   - Overall data quality metrics including original and final row counts 

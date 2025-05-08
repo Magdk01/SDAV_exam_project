@@ -207,4 +207,55 @@ layout: default
     .arrow-right {
         margin-left: 0.5rem;
     }
+
+    .visualization-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .visualization-container iframe {
+        width: 100%;
+        height: 1000px;
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    @media (max-width: 900px) {
+        .visualization-container iframe {
+            height: 800px;
+        }
+    }
+
+    /* Make iframes fill their width but respect custom heights */
+    iframe {
+        display: block;
+        margin: 2rem auto;
+        border: none;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+        transform: translateX(0);
+    }
+
+    /* Default height if none specified */
+    iframe:not([height]) {
+        height: 500px;
+    }
+
+    .story-content iframe,
+    /* or a more specific selector if you prefer */
+    iframe {
+        display: block;
+        /* stays a block so margin:auto works */
+        width: min(1300px, 100%);
+        /* 900 px max but fluid below that */
+        margin-inline: auto;
+        /* centres horizontally in the nearest parent div */
+        height: 1200px;
+        /* or use aspect-ratio: 16/9; */
+    }
 </style>
