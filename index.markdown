@@ -8,7 +8,9 @@ author: s214588
 
 
 
-An interactive exploration of international trade relationships from 1870 to 2014, revealing patterns, power shifts, and the impact of historical events on global commerce.
+This interactive visualization project explores the evolution of global trade networks using historical data from 1870 to 2014. Through a series of interconnected stories, we examine the global development, with a certain focus on the United States of America, and how they rose to economic power, as well as beginning to lose their edge.
+
+Choose any story card below to begin your exploration, or follow them in sequence for a guided journey through the data.
 
 <div class="story-grid">
     <a href="{{ site.baseurl }}/stories/data-quality" class="story-card">
@@ -36,16 +38,9 @@ An interactive exploration of international trade relationships from 1870 to 201
     </a>
 </div>
 
-## About This Project
+<!-- ## About This Project
 
-This interactive visualization project explores the evolution of global trade networks using historical data from 1870 to 2014. Through a series of interconnected stories, we examine:
 
-- Data quality and coverage across different time periods
-- Changes in global trade volumes and patterns
-- Network analysis of international trade relationships
-- Impact of major historical events on global commerce
-
-Choose any story card above to begin your exploration, or follow them in sequence for a guided journey through the data.
 
 ## Project Overview
 
@@ -66,7 +61,7 @@ This project focuses on [brief description of your project's focus].
 
 ## Repository
 
-The source code for this project is available on [GitHub](https://github.com/Magdk01/SDAV_exam_project). 
+The source code for this project is available on [GitHub](https://github.com/Magdk01/SDAV_exam_project).  -->
 
 
 <style>

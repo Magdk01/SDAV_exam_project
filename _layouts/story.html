@@ -54,6 +54,12 @@ layout: default
     </div>
 </div>
 
+<footer class="site-footer">
+    <div class="footer-wrapper">
+        © 2024 SDAV Exam Project. All rights reserved.
+    </div>
+</footer>
+
 <style>
     .wrapper {
         max-width: 100vw !important;
@@ -255,7 +261,32 @@ layout: default
         /* 900 px max but fluid below that */
         margin-inline: auto;
         /* centres horizontally in the nearest parent div */
-        height: 1200px;
+        /* height: 1200px; */
         /* or use aspect-ratio: 16/9; */
+    }
+
+    .site-footer {
+        background: #f4f7fa;
+        border-top: 2px solid #e0e6ed;
+        padding: 2rem 0 1.5rem 0;
+        margin-top: 3rem;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+
+    .footer-wrapper {
+        max-width: 70vw;
+        margin: 0 auto;
+        padding: 0 2rem;
+        color: #2c3e50;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    @media (max-width: 900px) {
+        .footer-wrapper {
+            max-width: 100vw;
+            padding: 0 1rem;
+        }
     }
 </style>
