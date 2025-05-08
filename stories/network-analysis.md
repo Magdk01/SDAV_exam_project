@@ -7,8 +7,9 @@ previous_story_title: "GDP Development"
 next_story: 
 ---
 
+Another intresting way to approach developments in trade, is to model trading as networks, to see who trades with who, and how these communities change over time.
 In this interactive visualization, we visualize global trade networks, where each circle represents a country, growing larger as that nation's trade expands. Lines connect trading partners, thickening as commerce between them increases. You can decide to move through the development as a movie using "play" or just go to significant time periodes such as World Wars or Economic crashes.
- As you move through time, you'll see the rise and fall of trading powers, the formation of economic blocs, and the ever-shifting patterns of international commerce.
+As you move through time, you'll see the rise and fall of trading powers, the formation of economic blocs, and the ever-shifting patterns of international commerce.
 
    <iframe src="../visualizations/trade_network.html" width="100%" height="1250px" frameborder="0"></iframe>
 

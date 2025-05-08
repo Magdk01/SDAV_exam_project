@@ -8,7 +8,7 @@ author: s214588
 
 
 
-This interactive visualization project explores the evolution of global trade networks using historical data from 1870 to 2014. Through a series of interconnected stories, we examine the global development, with a certain focus on the United States of America, and how they rose to economic power, as well as beginning to lose their edge.
+In light of today's shifting geopolitical landscape and China's emergence as the world's largest export market, this interactive visualization project explores a crucial historical transition in global trade from 1870 to 2014. Through a series of interconnected stories, we trace America's dramatic rise to economic supremacy following World War II and its subsequent challenges, as China's unprecedented economic growth begins to reshape the global trade landscape. By examining this historical data, we gain valuable insights into one of the most significant power shifts in modern economic history.
 
 Choose any story card below to begin your exploration, or follow them in sequence for a guided journey through the data.
 
@@ -45,6 +45,15 @@ Choose any story card below to begin your exploration, or follow them in sequenc
         </div>
     </a>
 </div>
+
+
+<div style="background-color: #fff3e6; border: 1px solid #ffcc99; border-radius: 4px; padding: 20px; margin: 30px 0;">
+    <h3 style="color: #995c00; margin-top: 0;">A Note on Data Interpretation</h3>
+    <p>This project examines patterns and behaviors in historical trade data, attempting to align observed trends with known historical events. While we use major historical milestones to help explain patterns in the data, it's important to note that we are primarily observing correlations rather than proving causation.</p>
+    <p>Our analysis makes certain assumptions about the relationships between data patterns and historical events, but these connections are interpretative rather than definitive. The goal is to use history as a lens through which to understand the data, not to use the data to rewrite or definitively explain historical events.</p>
+    <p>We encourage readers to approach these visualizations as explorations of trade patterns that coincide with historical developments, while maintaining awareness that real-world economic and political dynamics are often more complex than data alone can reveal.</p>
+</div>
+
 
 <!-- ## About This Project
 

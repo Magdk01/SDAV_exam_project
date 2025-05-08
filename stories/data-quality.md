@@ -10,7 +10,7 @@ next_story_title: "Trade Volumes"
 
 # Data source
 
-To give the reader a understanding on the basis for this report, this page tries to explain the data source as well as its shortcomings.
+To give the reader a understanding on the basis for this slideshow narrative diving into the development of global trade, this page tries to explain the data source as well as its shortcomings.
 
 The data originates from the [Correlates of War](https://correlatesofwar.org/) International Trade dataset (v4.0), which covers bilateral trade flows from 1870-2014 [1,2].
 
