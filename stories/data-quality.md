@@ -20,6 +20,7 @@ However the authors were great at listing the difficulties as different source c
 
 <iframe src="../visualizations/data_quality_analysis.html" width="100%" height="1100px" frameborder="0"></iframe>
 
+*Figure 1: Analysis of data quality and completeness in the Correlates of War International Trade dataset (1870-2014). The visualization shows the distribution of data sources, error types, and completeness metrics over time.*
 
 The most important takeaway from these plots is that data become much more available in later years, as more and more countries begang properly participating in global trade, as well as having a proper way of tracking it. This is visable from both of the upper row plots, whereas the left-most plot also shows that, with increasing amount of data, there are also room for far more errors and issues. This is however less dire compared to the early years of the dataset, where there is more incomplete data, than later years.
 

@@ -17,11 +17,15 @@ So what does the data say?
 
 
 <iframe src="../visualizations/GDP_development.html" width="100%" height="1050px" frameborder="0"></iframe>
+
+*Figure 1: GDP development of major economies from 1870 to 2014, with a focus on the United States and China. The visualization includes both linear and logarithmic scales, with dashed lines showing log-linear projections of future growth.*
+
 From a first view it seems that China's GPD climb more steeply, which is reinforced if you look at the log-scaled y-axis.
 
 A simple straight-line regression (in log-domain) predicts that China will overtake the American economy already in 2026, but it is also apperent that linear regression is properly too simply as it overshoots both series by the time we reach the latest observations. In other words, the turbo-charged growth of the 2000s and early 2010s has already cooled a little for both economies. (The fun part of using linear regression in log-domain is that it is visualized as exponential regression in the linear domain.)
 
-Is this forecast reliable? Probably not in a world daily tarrif changes and fast-changing geopolitics. 
+Is this forecast reliable? Probably not in a world daily tarrif changes and fast-changing geopolitics, but it can serve as a quick insight into the economic strength and development of the existing economic super powers.
+
 
 
 

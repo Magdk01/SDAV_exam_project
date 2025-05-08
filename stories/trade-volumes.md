@@ -17,7 +17,9 @@ To make this data easier to explore, the graph includes two key features:
 
 - A selectable country legend, where only the top five countries are shown by default to keep the view clean. You can click on others to add or remove them as needed.
 
-<iframe src="../visualizations/trade_development.html" width="100%" height="820px" frameborder="0"></iframe>
+<iframe src="../visualizations/trade_development.html" width="100%" height="840px" frameborder="0"></iframe>
+
+*Figure 1: Evolution of global trade volumes from 1870 to 2014, showing both exports and imports for major economies. The visualization features a toggle between linear and logarithmic scales, with the top five trading nations shown by default.*
 
 One of the first insights that emerges when toggling to the logarithmic view is how consistently the global market has grown. The lines follow a remarkably steady and straight upward trend, indicating near-exponential growth in trade over the last century. This scale makes it easier to see patterns in the early years that would otherwise be compressed into a flat line in the linear view.
 
