@@ -38,3 +38,12 @@ A fun part of using linear regression in log-domain is that it is visualized as 
 Each country also has a dashed line: a simple log-linear fit of its past growth, hidden by default. 
 <br>Toggle it on to see how a straight-line extrapolation would look—but remember that such projections ignore policy shocks like new tariffs or recessions.
 
+
+## Data source
+GDP data orginates from the Maddison Project Database[1], and is interacted with through the World Bank API for Python
+
+# References
+[1] Maddison Project Database, version 2020. Bolt, Jutta and Jan Luiten van Zanden (2020), "Maddison style estimates of the evolution of the world economy. A new 2020 update". Maddison Project Database, version 2020. Available at: https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2020
+
+[2] WBdata Python Package Documentation: https://wbdata.readthedocs.io/en/stable/
+
